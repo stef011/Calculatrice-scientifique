@@ -1,88 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+#include "manrat.h"
 
 //On déclare nos 4 variables.
 
 float a, b, R;
 int c;
 char ch;
-
-
-	float somme(float a, float b) {		// Fonction relative à la somme.
-		R = a + b;
-		return R;
-	}
-
-	float difference(float a, float b) {//Fonction relative à la différence.
-		R = a - b;
-		return R;
-	}
-
-	float produit(float a, float b) {	//Fonction relative au produit.
-		R = a*b;
-		return R;
-	}
-
-	float quotient(float a, float b) {	//Fonction relative au quotient.
-		R = a / b;
-		return R;
-	}
-
-	float factorielle(int n) { // fonction relative à la factorielle "a!".
-
-		//*************Méthode par récursivité*****************
-
-		int r;
-
-		if (n == 0) {
-			r = 1;
-		}
-		else {
-			r = n*factorielle(n - 1);
-		}
-		return r;
-
-		//*****************************************************
-
-
-		//*****************Méthode for*************************
-
-		/*a++;
-		R = 1;
-		for (size_t i = 1; i < a; i++)
-		{
-			R = i*R;
-		}*/
-
-		//****************************************************
-
-	}
-
-	float puissance(float a, float p) { // Fonction relative à la puissance p (utilisee dans la racine nieme).
-		float r = 1;
-		for (size_t i = 0; i < p; i++) {
-			r = a*r;
-		}
-		return r;
-	}
-
-	float racine_carre(float A) {		//Fonction relative à la racine carrée.
-		R = 1;
-		for (size_t i = 0; i < 152; i++) {
-			R = ((R + (A / R)) / 2);
-		}
-		return R;
-	}
-
-	float racine_nieme(float A, float n) {	//Fonction relative à la racine nieme.
-		R = 1;
-		int p = n - 1;
-		for (size_t i = 0; i < 1500; i++) {
-			R = (1 / n)*((n - 1)*R + A / puissance(R, p));
-		}
-		return R;
-	}
 
 
 
