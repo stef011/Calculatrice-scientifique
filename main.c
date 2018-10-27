@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
-#include "manrat.h"
+#include <manrat.h>
 
 //On déclare nos 4 variables.
 
