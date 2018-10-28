@@ -1,6 +1,4 @@
-#ifndef manrat.h
-#define manrat.h
-#endif
+#include <stdio.h>
 
 float somme(float a, float b) {		// Fonction relative à la somme.
     float r;

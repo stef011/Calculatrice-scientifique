@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
-#include <manrat.h>
+#include <dlfcn.h>
+
+// On définit le chemine de notre librairie dynamique.
+
+#define LIBPATH C:\Users\zunde\Documents\GitHub\Calculatrice-scientifique\libmanrat.so
 
 //On déclare nos 4 variables.
 
@@ -11,7 +15,14 @@ char ch;
 
 
 
+
 int main(){
+
+	dl = dlopen (LIBPATH, RTLD_LAZY);
+
+	if (dl==NULL) {
+		exit -1;
+	}
 
 	do {		//On fait une boucle while tant que o!=0
 
@@ -73,12 +84,13 @@ int main(){
 			printf("La racine %f eme de %f est %f\n\n\n\n", b, a, R);
 			break;
 
-
 		default:
 			printf("Erreur: variable erronee.\n\n\n\n");
 			break;
 
 		}
+
+		dlclose (LIBPATH)
 
 		ch = NULL;	//On "reset" la chaine de caractères.
 
